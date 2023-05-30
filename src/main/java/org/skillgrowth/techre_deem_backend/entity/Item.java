@@ -10,51 +10,51 @@ public class Item
 
 @Id
 @GeneratedValue(strategy= GenerationType.AUTO)
-private Integer id;
+private int  product_id;
 
-    private String name;
+    private String item;
 
-    private String description;
+    private String item_condition;
 
-    private String imageUrl;
+    private int price;
 
-    public Integer getId()
+    public int getId()
     {
-        return id;
+        return product_id;
     }
 
-    public void setId( Integer id )
+    public void setId( int product_id )
     {
-        this.id = id;
+        this.product_id = product_id;
     }
 
-    public String getName()
+    public String getItem()
     {
-        return name;
+        return item;
     }
 
-    public void setName( String name )
+    public void setName( String item )
     {
-        this.name = name;
+        this.item = item;
     }
 
-    public String getDescription()
+    public String getItem_condition()
     {
-        return description;
+        return item_condition;
     }
 
-    public void setDescription( String description )
+    public void setDescription( String item_condition )
     {
-        this.description = description;
+        this.item_condition = item_condition;
     }
 
-    public String getImageUrl()
+    public int getPrice()
     {
-        return imageUrl;
+        return price;
     }
 
-    public void setImageUrl( String imageUrl )
+    public void setPrice( int price)
     {
-        this.imageUrl = imageUrl;
+        this.price = price;
     }
 }
