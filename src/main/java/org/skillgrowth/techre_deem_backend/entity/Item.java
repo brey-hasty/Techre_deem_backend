@@ -4,19 +4,35 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import org.skillgrowth.techre_deem_backend.Controller.dto.ItemDto;
+
 @Entity
 public class Item
 {
 
-@Id
+    public Item(int product_id, String item, String item_condition, int price) {
+        // Parameterized constructor
+        // ...
+    }
+
+    public Item() {
+        this(0, "Default item", "Default item_condition", 0); // Delegates to the parameterized constructor
+    }
+
+
+    @Id
 @GeneratedValue(strategy= GenerationType.AUTO)
-private int  product_id;
+private int product_id;
 
     private String item;
 
     private String item_condition;
 
     private int price;
+
+    public Item(ItemDto itemDto) {
+
+    }
 
     public int getId()
     {
